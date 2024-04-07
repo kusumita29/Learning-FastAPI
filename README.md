@@ -1,2 +1,2 @@
 # Learning-FastAPI
-uploaded all my learning progress for fastAPI
+Uploaded all my learning progress for fastAPI.

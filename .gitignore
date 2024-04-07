@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-fastapi-rev
+fastapi-env
 fastapi-practice.db
 # C extensions
 *.so

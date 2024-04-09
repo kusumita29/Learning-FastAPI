@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 
 def create_article(db: Session, request: ArticleBase):
     if request.content.startswith("Once upon a time"):
-        raise StoryException('No stories please')
+        raise StoryException("No stories please")
     new_article = DbArticle(
         title=request.title,
         content=request.content,

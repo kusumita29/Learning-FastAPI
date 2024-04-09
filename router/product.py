@@ -1,10 +1,5 @@
-from pydoc import HTMLRepr
-from fastapi import APIRouter, Depends
-from sqlalchemy.orm import Session
-from db.database import get_db
-from db import db_article
-from schemas import ArticleBase, ArticleDisplay
-from typing import List
+from typing import Annotated, List, Optional
+from fastapi import APIRouter, Header
 from fastapi.responses import HTMLResponse, PlainTextResponse, Response
 
 products = ["camera", "book", "magazine"]

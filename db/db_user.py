@@ -28,6 +28,7 @@ def get_user_by_id(db: Session, id: int):
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND, detail=f"User with id {id} not found"
         )
+    return user
 
 
 def update_user(db: Session, id: int, request: UserBase):

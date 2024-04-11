@@ -1,3 +1,5 @@
+import os
+from dotenv import load_dotenv
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from typing import Optional
@@ -7,9 +9,12 @@ from sqlalchemy.orm import Session
 from db.database import get_db
 from db import db_user
 
+#load env variables
+load_dotenv()
+
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
-SECRET_KEY = "ad665e1b472a11aa5f00bccd88c8f399b96b18f7c09522583d9c218a0b706e6d"
+SECRET_KEY = os.environ.get("SECRET_KEY")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 

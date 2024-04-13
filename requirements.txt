@@ -5,3 +5,5 @@ passlib
 bcrypt
 ruff
 python-multipart
+python-jose
+python-dotenv

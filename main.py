@@ -5,11 +5,13 @@ from typing import Optional
 from fastapi.responses import JSONResponse
 from exceptions import StoryException
 from router import user, article, product, blog_post, blog_get
+from auth import authentication_router
 from db import models
 from db.database import engine
 
 
 app = FastAPI()
+app.include_router(authentication_router.router)
 app.include_router(user.router)
 app.include_router(article.router)
 app.include_router(product.router)
